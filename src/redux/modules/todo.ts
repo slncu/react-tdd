@@ -13,6 +13,13 @@ const initialState: Todos = {
   items: []
 }
 
+interface InclementId {
+  type: 'todos/InclementId',
+  payload: string
+}
+
+export const TodoActions = InclementId;
+
 export default (state: Todos = initialState, action: any) => {
   switch (action.type) {
     default:
@@ -32,5 +39,5 @@ export function incrementId() {
  * todoアイテムを追加する
  */
 export function addItem() {
-
+  console.log('hoge');
 }
